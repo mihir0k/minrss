@@ -1,0 +1,11 @@
+#!/bin/sh
+TARGET="$0"
+while [ -L "$TARGET" ]; do
+  LINK="$(readlink "$TARGET")"
+  case "$LINK" in
+    /*) TARGET="$LINK" ;;
+    *) TARGET="$(dirname -- "$TARGET")/$LINK" ;;
+  esac
+done
+DIR="$(CDPATH= cd -- "$(dirname -- "$TARGET")" && pwd)"
+exec python3 "$DIR/minrss.py" "$@"

@@ -1,0 +1,7 @@
+{
+  "name": "minrss_native_host",
+  "description": "Native host for minrss",
+  "path": "/path/to/minrss/firefox-native/host/minrss_native_host.py",
+  "type": "stdio",
+  "allowed_extensions": ["minrss@local"]
+}

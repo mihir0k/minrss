@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "minrss",
+  "version": "0.1.0",
+  "description": "Add RSS feeds to minrss from the link context menu.",
+  "permissions": ["menus", "nativeMessaging", "notifications"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "minrss@local"
+    }
+  }
+}
